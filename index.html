@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
   <title>GLUB Studio</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
     :root {
       --primary: #000000;
@@ -46,6 +47,11 @@
       padding: 4rem 2rem;
     }
 
+    .hero-logo {
+      width: 120px;
+      margin-bottom: 1.5rem;
+    }
+
     h1 {
       font-size: 2.2rem;
       margin-bottom: 1rem;
@@ -72,6 +78,10 @@
       background-color: #e60048;
     }
 
+    .recaptcha-box {
+      margin-top: 2rem;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -95,12 +105,18 @@
   </header>
 
   <main>
+    <img src="glub-logo.png" alt="GLUB Logo" class="hero-logo" />
     <h1>Welcome to GLUB Studio</h1>
-    <p>Serving food & fun for everyone!</p>
+    <p>GLUB Studio — Serving fun, games, and great vibes to everyone!</p>
     <div class="buttons">
       <a href="https://create.roblox.com/dashboard/creations/experiences/7440729380/overview" target="_blank">Play Our Roblox Game</a>
       <a href="https://www.tiktok.com/@officialglub?_t=ZN-8yH0sFV4AE6&_r=1" target="_blank">Follow us on TikTok</a>
       <a href="https://discord.gg/kEjCnvkydw" target="_blank">Join our Discord</a>
+    </div>
+
+    <div class="recaptcha-box">
+      <h2>Verification</h2>
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
     </div>
   </main>
 
