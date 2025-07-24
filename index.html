@@ -4,13 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GLUB Studio</title>
+  <meta name="description" content="GLUB Studio - Creating fun, immersive games for everyone!" />
+  <link rel="icon" type="image/png" href="https://roblox68597.github.io/glub-logo.png" />
+
+  <!-- Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #f2f2f2;
+      color: #333;
+      text-align: center;
     }
 
     header {
@@ -20,15 +26,27 @@
     }
 
     .logo {
-      font-size: 28px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 32px;
       font-weight: bold;
     }
 
+    nav {
+      margin-top: 10px;
+    }
+
     nav a {
-      margin: 0 12px;
       color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      margin: 0 10px;
+      font-weight: 500;
     }
 
     nav a:hover {
@@ -39,26 +57,15 @@
       padding: 40px 20px;
     }
 
-    img {
-      max-width: 300px;
-      height: auto;
-    }
-
     h1 {
-      font-size: 2.5em;
-      margin-top: 20px;
-      color: #111;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 1.2em;
-      margin: 20px auto;
+      font-size: 18px;
       max-width: 600px;
-      color: #333;
-    }
-
-    .buttons {
-      margin-top: 30px;
+      margin: 0 auto 30px;
     }
 
     .buttons a {
@@ -69,57 +76,104 @@
       color: white;
       text-decoration: none;
       border-radius: 8px;
-      font-size: 16px;
       font-weight: bold;
+      transition: background-color 0.3s ease;
     }
 
     .buttons a:hover {
       background-color: #e03b88;
     }
 
-    .g-recaptcha {
-      margin-top: 30px;
-      display: inline-block;
+    .about {
+      background-color: #fff;
+      padding: 40px 20px;
+      margin-top: 40px;
+      border-top: 2px solid #ccc;
+    }
+
+    .about h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      font-size: 17px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .recaptcha {
+      margin: 30px 0;
     }
 
     footer {
       background-color: #111;
-      color: white;
-      padding: 15px;
+      color: #ccc;
+      padding: 20px;
       font-size: 14px;
     }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 8px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .social-icons a:hover {
+      color: white;
+    }
   </style>
-  <!-- Google reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
   <header>
-    <div class="logo">GLUB Studio</div>
+    <img src="https://roblox68597.github.io/glub-logo.png" alt="GLUB Logo" class="logo" />
+    <div class="title">GLUB Studio</div>
     <nav>
       <a href="#home">Home</a>
-      <a href="https://www.roblox.com/">Roblox</a>
-      <a href="https://www.tiktok.com/">TikTok</a>
-      <a href="https://discord.gg/">Discord</a>
+      <a href="#about">About</a>
     </nav>
   </header>
 
-  <main>
-    <img src="https://roblox68597.github.io/glub-logo.png" alt="GLUB Studio Logo" />
+  <main id="home">
     <h1>Welcome to GLUB Studio</h1>
-    <p>We create fun, immersive games for everyone to enjoy! Whether you're here for adventure, fun, or community — we’ve got something for you.</p>
+    <p>We create fun, immersive Roblox games and experiences that connect communities and bring joy to players worldwide.</p>
 
     <div class="buttons">
-      <a href="https://www.roblox.com/">Play on Roblox</a>
-      <a href="https://www.tiktok.com/">Follow us on TikTok</a>
-      <a href="https://discord.gg/">Join our Discord</a>
+      <a href="https://www.roblox.com/share/g/236822034" target="_blank">Join our Roblox Group</a>
+      <a href="https://share.google/OUn9tD41QloSWtf3l" target="_blank">Play: Mall of GLUB</a>
+      <a href="https://www.tiktok.com/@officialglub?_t=ZN-8yIHlUXkhPy&_r=1" target="_blank">Follow on TikTok</a>
+      <a href="https://discord.gg/U5FfNPkM" target="_blank">Join Discord</a>
     </div>
 
-    <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+    <div class="recaptcha">
+      <form action="?" method="POST">
+        <div class="g-recaptcha" data-sitekey="6Le5Ho0rAAAAAGW6HljBhQTueN0qduV0pYBP3WVp"></div>
+        <br />
+        <input type="submit" value="Verify" />
+      </form>
+    </div>
   </main>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      GLUB Studio is a creative game development team focused on building engaging Roblox experiences that inspire imagination. Our mission is to develop games that are fun, inclusive, and enjoyed by everyone. Whether you're here to play, create, or connect — we welcome you!
+    </p>
+  </section>
 
   <footer>
     &copy; 2025 GLUB Studio. All rights reserved.
+    <div class="social-icons">
+      <a href="https://www.roblox.com/share/g/236822034" target="_blank">Roblox</a>
+      <a href="https://www.tiktok.com/@officialglub?_t=ZN-8yIHlUXkhPy&_r=1" target="_blank">TikTok</a>
+      <a href="https://discord.gg/U5FfNPkM" target="_blank">Discord</a>
+    </div>
   </footer>
 
 </body>
