@@ -2,78 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brosgo | Roblox Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLUB Studio</title>
+  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+
+  <!-- Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   <style>
+    :root {
+      --primary: #000000;
+      --accent: #ff0055;
+      --bg: #f0f0f0;
+      --text: #222222;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #1f1f1f, #3c3c3c);
-      color: white;
-      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
     }
 
     header {
-      padding: 40px 20px 20px;
+      background-color: var(--primary);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
     }
 
-    img.logo {
-      width: 200px;
-      border-radius: 0;
-      border: none;
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      text-align: center;
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero-logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     }
 
     h1 {
-      margin-top: 20px;
-      font-size: 2.5em;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
     p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
       max-width: 600px;
-      margin: 10px auto 30px;
-      font-size: 1.1em;
-      color: #ccc;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .btn-group {
+    .buttons {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
-      margin-bottom: 40px;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
 
-    a.button {
-      background: #ff4757;
-      padding: 15px 30px;
-      text-decoration: none;
+    .buttons a {
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent);
       color: white;
-      border-radius: 12px;
+      text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.2s;
     }
 
-    a.button:hover {
-      background: #e84118;
+    .buttons a:hover {
+      background-color: #e60048;
+      transform: translateY(-2px);
     }
 
-    section {
-      padding: 20px;
+    .g-recaptcha {
+      margin-top: 2rem;
     }
 
     footer {
-      background: #111;
-      padding: 20px;
-      color: #888;
-      font-size: 0.9em;
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 4rem;
     }
 
-    @media screen and (max-width: 600px) {
+    @media (max-width: 600px) {
       h1 {
-        font-size: 2em;
+        font-size: 1.8rem;
       }
-      .btn-group {
-        flex-direction: column;
+      .hero-logo {
+        width: 120px;
+        height: 120px;
       }
     }
   </style>
@@ -81,32 +133,31 @@
 <body>
 
   <header>
-    <!-- Replace with your real logo -->
-    <img class="logo" src="https://via.placeholder.com/300x300.png?text=Your+Logo" alt="Brosgo Logo" />
-    
-    <h1>Welcome to Brosgo</h1>
-    <p>Join our Roblox group, play our game, and connect with us on Discord and TikTok!</p>
+    <div class="logo">GLUB Studio</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="https://www.roblox.com/share/g/236822034" target="_blank">Roblox Group</a>
+      <a href="https://www.tiktok.com/@officialglub?_t=ZN-8yI5gAqRdgc&_r=1" target="_blank">TikTok</a>
+      <a href="https://discord.gg/kEjCnvkydw" target="_blank">Discord</a>
+    </nav>
   </header>
 
-  <section class="btn-group">
-    <a class="button" href="https://www.roblox.com/share/g/236822034" target="_blank">🎮 Play Our Roblox Game</a>
-    <a class="button" href="https://discord.com" target="_blank">💬 Join Our Discord</a>
-    <a class="button" href="https://www.roblox.com/groups/your-group-id" target="_blank">👥 Join Our Roblox Group</a>
-    <a class="button" href="https://www.tiktok.com/@brosgo_glub" target="_blank">📱 TikTok: @brosgo_glub</a>
-  </section>
+  <main>
+    <img src="glub-logo.png" alt="GLUB Logo" class="hero-logo" />
+    <h1>Welcome to GLUB Studio</h1>
+    <p>We create fun, immersive games and a vibrant community on Roblox and beyond. Join us and be part of the vibe!</p>
 
-  <section>
-    <h2>About Brosgo</h2>
-    <p>
-      Brosgo is a Roblox-based creative team building fun and emotional stories, games, and content. We welcome all fans and players to join our journey!
-    </p>
-    <p>
-      Join our Roblox group for updates, events, and more. Chat with us on Discord and follow us on TikTok for daily content.
-    </p>
-  </section>
+    <div class="buttons">
+      <a href="https://www.roblox.com/share/g/236822034" target="_blank">Visit Roblox Group</a>
+      <a href="https://www.tiktok.com/@officialglub?_t=ZN-8yI5gAqRdgc&_r=1" target="_blank">Follow on TikTok</a>
+      <a href="https://discord.gg/kEjCnvkydw" target="_blank">Join Discord</a>
+    </div>
+
+    <div class="g-recaptcha" data-sitekey="6Le5Ho0rAAAAADUIP4LyACZhFEBoPP4bIK78Zo0K"></div>
+  </main>
 
   <footer>
-    &copy; 2025 Brosgo. All rights reserved.
+    &copy; 2025 GLUB Studio. All rights reserved.
   </footer>
 
 </body>
